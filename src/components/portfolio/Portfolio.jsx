@@ -5,8 +5,7 @@ import "./portfolio.scss"
 import {featuredPortfolio,
         webPortfolio,
         mobilePortfolio,
-        designPortfolio,
-        contentPortfolio} from "../../data"
+        designPortfolio,} from "../../data"
 
 function Portfolio() {
 
@@ -29,10 +28,6 @@ function Portfolio() {
         {
             id: "design",
             title: "Design"
-        },
-        {
-            id: "content",
-            title: "Content"
         }
     ]
 
@@ -50,9 +45,6 @@ function Portfolio() {
                 break;
             case "design":
                 setData(designPortfolio);
-                break;
-            case "content":
-                setData(contentPortfolio);
                 break;
             default:
                 setData(featuredPortfolio);
