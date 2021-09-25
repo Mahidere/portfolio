@@ -11,12 +11,15 @@
     }
 
     .left{
+        display: flex;
         flex: 0.5;
         overflow: hidden;
 
+        @media (min-width: 768px) {
+            align-items: center;
+        }
+
         .imgContainer{
-            width: 700px;
-            height: 700px;
             background-color: lightskyblue;
             border-radius: 50%;
             display: flex;
@@ -26,15 +29,13 @@
 
             @include mobile{
                 align-items: flex-start;
+                width: 700px;
+                height: 700px;
             }
-
-            @media (max-width: 1090px) {
-                width: 600px;
-                height: 600px;
-            }
+            
 
             img{
-                height: 85%;
+                
 
                 @include mobile{
                     height: 45%;
