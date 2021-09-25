@@ -1,6 +1,7 @@
 @import "../../global.scss";
 
 .intro{
+    height: 100vh;
     background-color: #F5F5F5;
     display: flex;
 
@@ -25,6 +26,11 @@
 
             @include mobile{
                 align-items: flex-start;
+            }
+
+            @media (max-width: 1090px) {
+                width: 600px;
+                height: 600px;
             }
 
             img{
@@ -58,17 +64,28 @@
                 font-size: 60px;
                 margin: 10px 0;
 
+                @media (max-width: 1090px) {
+                    font-size: 40px;
+                }
+
                 @include mobile{
                     font-size: 40px
                 }
             }
             h2{
                 font-size: 35px;
+
+                @media (max-width: 1090px) {
+                    font-size: 30px;
+                }
             }
             h3{
                 font-size: 30px;
 
                 @include mobile{
+                    font-size: 20px;
+                }
+                @media (max-width: 1090px) {
                     font-size: 20px;
                 }
 

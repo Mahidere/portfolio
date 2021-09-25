@@ -1,22 +1,40 @@
 import "./topbar.scss"
-import {Person, Mail} from "@material-ui/icons"
 
 function Topbar({menuOpen, setMenuOpen}) {
     return (
         <div className={"topbar " + (menuOpen && "active")}>
             <div className="wrapper">
                 <div className="left">
-                    <a href="#intro" className="logo">Mahdere</a>
-                    <div className="itemContainer">
-                        <Person className="icon"/>
-                        <span>+251 962 43 9494</span>
-                    </div>
-                    <div className="itemContainer">
-                        <Mail className="icon"/>
-                        <span>mahderetewelign@gmail.com</span>
-                    </div>
+                    <a href="#intro" className="logo">Mahdere</a>       
                 </div>
-                <div className="right">
+                <div className="center" >
+                    <ul>
+                      <li >
+                        <a href="#intro">Home</a>
+                      </li>
+                      <li >
+                        <a href="#portfolio">Portfolio</a>
+                      </li>
+                      <li >
+                        <a href="#works">Works</a>
+                      </li>
+                      <li >
+                        <a href="#testimonials">Testimonials</a>
+                      </li>
+                      <li >
+                        <a href="#contact">Contact</a>
+                      </li>
+                    </ul>
+                </div>
+                <div className="right" >
+                    <div className="contact">
+                        <a href="https://wa.me/00251962439494/" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/icons/whatsapp.png" alt="" />
+                        </a>
+                        <a href="https://t.me/debugging101" target="_blank" rel="noopener noreferrer">
+                           <img src="assets/icons/telegram.png" alt="" />
+                        </a>
+                    </div>
                     <div className="hamburger" onClick={()=>setMenuOpen(!menuOpen)}>
                         <span className="line1"></span>
                         <span className="line2"></span>
